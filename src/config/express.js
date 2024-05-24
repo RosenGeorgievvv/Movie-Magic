@@ -1,6 +1,8 @@
-const express = require("express");
+const {urlencoded, static: staticHandler } = require("express");
 
 function configExpress(app) {
-  app.use(express.urlencoded({ extended: true }));
-  app.use("/static", express.static("static"));
+  app.use(urlencoded({ extended: true }));
+  app.use("/static", staticHandler("static"));
 }
+
+module.exports = { configExpress };
