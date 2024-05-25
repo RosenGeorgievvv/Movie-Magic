@@ -1,6 +1,6 @@
 .createSection,
 .editSection {
-  background-color: #b5838d;
+  background-color: rgb(67, 104, 253);
   margin: auto;
   width: 740px;
   height: 950px;
@@ -10,7 +10,7 @@
   display: flex;
   color: black;
   font-weight: bold;
-  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 10px 20px 5px #bdf7fa;
 }
 
 .noBullet textarea {
