@@ -8,3 +8,4 @@ class Movie{
     rating;
     description;
 }
+module.exports = { Movie };
