@@ -24,9 +24,18 @@ function toMovieModel(data){
     movie.imageURL = data.imageURL;
     movie.rating = data.rating;
     movie.description = data.description;
+
+    return movie;
 }
 
 async function getAllMovies() {
     const movies = await readFile();
-    return movies.map()
+    return movies.map(toMovieModel);
+}
+
+async function getMovieById(id){
+    const movies = await readFile();
+
+    const movie = movies.find(m => m.id == id);
+    return movie ? toMovieModel(movie) : movie;
 }
