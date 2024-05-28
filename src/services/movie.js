@@ -40,6 +40,11 @@ async function getMovieById(id){
     return movie ? toMovieModel(movie) : movie;
 }
 
+async function createMovie(movieData){
+
+    
+}
+
 module.exports = {
     getAllMovies,
     getMovieById
