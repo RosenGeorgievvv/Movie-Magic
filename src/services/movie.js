@@ -52,6 +52,10 @@ async function createMovie(movieData) {
     rating: movieData.rating,
     description: movieData.description
   };
+
+  const movies = await readFile();
+  movie.push(movie);
+  await writeFile(movies);
 }
 
 function uuid() {
