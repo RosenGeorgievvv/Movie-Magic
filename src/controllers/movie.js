@@ -1,6 +1,7 @@
 module.exports = {
-    createGet: (req, res) =>{
-        res.render('create');
-    },
-    //TODO createPost action
-}
+  createGet: (req, res) => {
+    res.render("create");
+  },
+  createPost: (req, res) => {},
+  
+};
