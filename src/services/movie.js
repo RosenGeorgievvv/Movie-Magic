@@ -43,8 +43,15 @@ async function getMovieById(id) {
 async function createMovie(movieData) {
   const id = uuid();
   const movie = {
-    
-  }
+    id,
+    title: movieData.title,
+    genre: movieData.genre,
+    director: movieData.director,
+    year: movieData.year,
+    imageURL: movieData.imageURL,
+    rating: movieData.rating,
+    description: movieData.description
+  };
 }
 
 function uuid() {
