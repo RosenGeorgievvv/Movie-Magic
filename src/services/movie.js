@@ -47,9 +47,9 @@ async function createMovie(movieData) {
     title: movieData.title,
     genre: movieData.genre,
     director: movieData.director,
-    year: movieData.year,
+    year: Number(movieData.year),
     imageURL: movieData.imageURL,
-    rating: movieData.rating,
+    rating: Number(movieData.rating),
     description: movieData.description
   };
 
