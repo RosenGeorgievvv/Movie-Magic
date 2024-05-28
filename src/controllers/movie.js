@@ -2,6 +2,8 @@ module.exports = {
   createGet: (req, res) => {
     res.render("create");
   },
-  createPost: (req, res) => {},
+  createPost: async (req, res) => {
+
+  },
   
 };
