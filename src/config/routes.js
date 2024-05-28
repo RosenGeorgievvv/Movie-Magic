@@ -10,6 +10,7 @@ router.get('/', home);
 router.get('/about', about);
 router.get('/details/:id', details);
 router.get('/create', createGet);
+router.post('/create', createPost);
 router.get('/search', search);
 
 router.get('*', notFound);
