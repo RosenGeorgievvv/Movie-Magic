@@ -54,7 +54,7 @@ async function createMovie(movieData) {
   };
 
   const movies = await readFile();
-  movie.push(movie);
+  movies.push(movie);
   await writeFile(movies);
 
   return toMovieModel(movie);
