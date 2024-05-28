@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const { home, details, search } = require("../controllers/catalog");
 const { about } = require("../controllers/about");
-const { createGet } = require("../controllers/movie");
+const { createGet, createPost } = require("../controllers/movie");
 const { notFound } = require("../controllers/404");
 
 const router = Router();
