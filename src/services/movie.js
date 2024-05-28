@@ -69,4 +69,5 @@ function uuid() {
 module.exports = {
   getAllMovies,
   getMovieById,
+  createMovie
 };
