@@ -6,6 +6,6 @@ module.exports = {
   },
   createPost: async (req, res) => {
     const result = await createMovie(req.body);
-    res.redirect("/");
+    res.redirect("/details/" + result.id);
   },
 };
