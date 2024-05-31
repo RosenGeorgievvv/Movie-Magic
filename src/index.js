@@ -14,8 +14,10 @@ async function start() {
   configHbs(app);
 
   configExpress(app);
-  
+
   app.use(router);
 
-  app.listen(PORT);
+  app.listen(PORT, () => {
+    console.log(`Application running on port ${PORT}`)
+  });
 }
