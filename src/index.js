@@ -21,3 +21,4 @@ async function start() {
     console.log(`Application running on port ${PORT}`)
   });
 }
+start();
