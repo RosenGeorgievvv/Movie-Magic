@@ -24,11 +24,7 @@ async function createMovie(movieData) {
     imageURL: movieData.imageURL,
   });
 
-  const movies = await readFile();
-  movies.push(movie);
-  await writeFile(movies);
-
-  return toMovieModel(movie);
+  return movie.save().lean();
 }
 
 module.exports = {
