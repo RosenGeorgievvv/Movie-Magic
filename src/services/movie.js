@@ -14,24 +14,22 @@ async function getMovieById(id) {
 }
 
 async function createMovie(movieData) {
-  
-  // const id = uuid();
-  // const movie = {
-  //   id,
-  //   title: movieData.title,
-  //   genre: movieData.genre,
-  //   director: movieData.director,
-  //   year: Number(movieData.year),
-  //   imageURL: movieData.imageURL,
-  //   rating: Number(movieData.rating),
-  //   description: movieData.description
-  // };
+  const movie = new Movie({
+    title: movieData.title,
+    genre: movieData.genre,
+    director: movieData.director,
+    year: Number(movieData.year),
+    rating: Number(movieData.rating),
+    description: movieData.description,
+    imageURL: movieData.imageURL,
+    cast: []
+  });
 
-  // const movies = await readFile();
-  // movies.push(movie);
-  // await writeFile(movies);
+  const movies = await readFile();
+  movies.push(movie);
+  await writeFile(movies);
 
-  // return toMovieModel(movie);
+  return toMovieModel(movie);
 }
 
 module.exports = {
