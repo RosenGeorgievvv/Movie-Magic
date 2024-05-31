@@ -1,6 +1,8 @@
 module.exports = {
   createGet: (req, res) => {
-    res.render("create-cast");
+    res.render("cast-create");
   },
-  createPost: (req, res) => {},
+  createPost: (req, res) => {
+    res.end();
+  },
 };
