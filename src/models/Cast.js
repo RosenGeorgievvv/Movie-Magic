@@ -9,18 +9,22 @@ const castSchema = new Schema({
         type: Number,
         required: true,
         min: 0,
-        max: 199
+        max: 255
     },
-    name: {
+    born: {
         type: String,
         required: true
     },
-    name: {
+    nameInMovie: {
         type: String,
         required: true
     },
-    name: {
+    imageURL: {
         type: String,
         required: true
     },
+    movie: {
+        type: Types.ObjectId,
+        ref: 'Movie'
+    }
 })
