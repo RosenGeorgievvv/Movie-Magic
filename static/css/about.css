@@ -1,12 +1,12 @@
 .full-screen {
-  background-color: rgb(67, 104, 253);
+  background-color: #6d6875;
   width: 98%;
   margin-left: 10px;
   margin-right: 10px;
   height: 530px;
   color: white;
   text-align: center;
-  box-shadow: 0 0px 81px #bdf7fa;
+  box-shadow: 0 0px 81px #5b848a;
 }
 
 .about {

@@ -19,7 +19,7 @@ main {
 }
 
 body {
-    background-color: #bdf7fa;
+    background-color: #FFB4A2;
     background-position: 20% 82%;
     backdrop-filter: blur(4px);
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@ body {
 
 nav,
 footer {
-    background-color: rgb(67, 104, 253);
+    background-color: #B5838D;
     width: 100%;
     display: flex;
     font-size: 1.5rem;
@@ -105,7 +105,7 @@ nav a:hover {
     height: 30px;
     border-radius: 10%;
     font-weight: bold;
-    background-color: #bdf7fa;
+    background-color: #FFB4A2;
 }
 
 footer {
@@ -153,13 +153,6 @@ footer {
     animation: cssAnimation 0s ease-in 2s forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-}
-
-.error label{
-    color: red
-}
-.error input.inputFields, .error textarea.inputFields{
-    border-color: red;
 }
 
 @keyframes cssAnimation {

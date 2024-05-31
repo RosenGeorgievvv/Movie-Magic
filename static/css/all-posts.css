@@ -35,7 +35,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   box-shadow: 0 0px 81px #5b848a;
-  background-color: rgb(67, 104, 253);
+  background-color: #6D6875;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-left: 1.5em;
@@ -110,7 +110,7 @@
   height: 450px;
   width: 350px;
   padding: 1em 1em;
-  background: #bdf7fa;
+  background: #FFB4A2;
   border-radius: 10px;
 }
 
@@ -149,7 +149,7 @@ img > .text-shadow {
   font-size: 18px;
   margin-top: 30px;
   margin-left: 10px;
-  background: rgb(67, 104, 253);
+  background: #B5838D;
   border-radius: 12px;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
