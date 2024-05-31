@@ -9,8 +9,9 @@ const router = Router();
 router.get('/', home);
 router.get('/about', about);
 router.get('/details/:id', details);
-router.get('/create', createGet);
-router.post('/create', createPost);
+router.get('/create/movie', createGet);
+router.post('/create/movie', createPost);
+router.post('/create/cast', createCast);
 router.get('/search', search);
 
 router.get('*', notFound);
