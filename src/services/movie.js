@@ -6,11 +6,7 @@ async function getAllMovies() {
 }
 
 async function getMovieById(id) {
-  return null
-  // const movies = await readFile();
-
-  // const movie = movies.find((m) => m.id == id);
-  // return movie ? toMovieModel(movie) : movie;
+  return await Movie.findById(id).lean();
 }
 
 async function createMovie(movieData) {
@@ -24,7 +20,9 @@ async function createMovie(movieData) {
     imageURL: movieData.imageURL,
   });
 
-  return movie.save().lean();
+  await movie.save();
+
+  return movie;
 }
 
 module.exports = {
