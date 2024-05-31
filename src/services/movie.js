@@ -22,7 +22,6 @@ async function createMovie(movieData) {
     rating: Number(movieData.rating),
     description: movieData.description,
     imageURL: movieData.imageURL,
-    cast: []
   });
 
   const movies = await readFile();
