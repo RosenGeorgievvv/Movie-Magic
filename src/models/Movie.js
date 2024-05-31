@@ -30,9 +30,16 @@ const movieSchema = new Schema({
         required: true,
         maxLength: 1000
     },
-    description: {
+    imageURL: {
         type: String,
         required: true
+    },
+    cast: {
+        type: [Types.ObjectId],
+        ref: 'Cast'
     }
-})
+});
+
+const Movie = model('Movie', movieSchema);
+
 module.exports = { Movie };
