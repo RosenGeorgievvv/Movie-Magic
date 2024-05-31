@@ -27,4 +27,8 @@ const castSchema = new Schema({
         type: Types.ObjectId,
         ref: 'Movie'
     }
-})
+});
+
+const Cast = model('Cast', castSchema);
+
+module.exports = { Cast };
