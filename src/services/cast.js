@@ -8,7 +8,10 @@ async function createCast(castData){
     nameInMovie: castData.nameInMovie,
     imageURL: castData.imageURL,
     movie: castData.movie
- })
+ });
+
+ await cast.save();
+ return cast;
 }
 
 async function getAllCast(){
