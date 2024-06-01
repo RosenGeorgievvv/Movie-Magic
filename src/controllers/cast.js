@@ -1,8 +1,11 @@
+const { createCast } = require("../services/cast");
+
 module.exports = {
   createGet: (req, res) => {
     res.render("cast-create");
   },
-  createPost: (req, res) => {
+  createPost: async (req, res) => {
+    const result = await createCast(req.body);
     res.end();
   },
 };
