@@ -5,8 +5,17 @@ module.exports = {
     res.render("cast-create");
   },
   createPost: async (req, res) => {
+    const errors = {
+      name: !req.body.name,
+      age: !req.body.age,
+      born: !req.body.born,
+      nameInMovie: !req.body.nameInMovie,
+      imageURL: !req.body.imageURL,
+      movie: !req.body.movie
+    };
+
     const result = await createCast(req.body);
 
-    res.redirect('/');
+    res.redirect("/");
   },
 };
