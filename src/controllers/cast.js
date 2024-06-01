@@ -6,6 +6,7 @@ module.exports = {
   },
   createPost: async (req, res) => {
     const result = await createCast(req.body);
-    res.end();
+
+    res.redirect('/');
   },
 };
