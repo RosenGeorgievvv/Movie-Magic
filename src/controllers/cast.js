@@ -14,8 +14,11 @@ module.exports = {
       movie: !req.body.movie
     };
 
+    if(Object.values(errors).includes(true)){
+      res.render('cast-create', {cast: req.body, errors });
+      return;
+    }
     const result = await createCast(req.body);
-
     res.redirect("/");
   },
 };
