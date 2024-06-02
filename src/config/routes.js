@@ -4,6 +4,7 @@ const { about } = require("../controllers/about");
 const { createGet, createPost } = require("../controllers/movie");
 const { createGet: createCastGet, createPost: createCastPost } = require('../controllers/cast')
 const { notFound } = require("../controllers/404");
+const { attachGet, attachPost } = require("../controllers/attach");
 
 const router = Router();
 
