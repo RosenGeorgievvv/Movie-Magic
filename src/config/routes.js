@@ -10,6 +10,8 @@ const router = Router();
 router.get('/', home);
 router.get('/about', about);
 router.get('/details/:id', details);
+router.get('/attach/:id', attachGet);
+router.post('/attach/:id', attachPost);
 router.get('/create/movie', createGet);
 router.post('/create/movie', createPost);
 router.get('/create/cast', createCastGet);
