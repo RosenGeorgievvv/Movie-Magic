@@ -32,7 +32,7 @@ module.exports = {
       return;
     }
     const movie = await getMovieById(movieId, true);
-    await attachCastToMovie(movie, castId);
+    await attachCastToMovie(await movieQuery, castId);
 
     res.redirect("/details/" + movieId);
   },
