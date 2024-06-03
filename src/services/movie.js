@@ -5,14 +5,8 @@ async function getAllMovies() {
   return movies;
 }
 
-async function getMovieById(id, returnRaw = false) {
-  const query = Movie.findById(id);
-
-  if (returnRaw) {
-    return await query;
-  } else {
-    return await query.lean();
-  }
+async function getMovieById(id) {
+  return Movie.findById(id);
 }
 
 async function createMovie(movieData) {
