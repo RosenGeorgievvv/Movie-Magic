@@ -1,4 +1,4 @@
-const { getMovieById } = require("../services/movie");
+const { getMovieById, attachCastToMovie } = require("../services/movie");
 const { getAllCast } = require('../services/cast');
 
 module.exports = {
@@ -30,6 +30,9 @@ module.exports = {
 
         return;
        }
+
+       await attachCastToMovie(movie, castId);
+
        res.end();
     }
 }
