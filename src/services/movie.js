@@ -5,8 +5,14 @@ async function getAllMovies() {
   return movies;
 }
 
-async function getMovieById(id) {
-  return await Movie.findById(id).lean();
+async function getMovieById(id, returnRaw = false) {
+  const query = Movie.findById(id);
+
+  if (returnRaw) {
+    return await query;
+  } else {
+    return await query.lean();
+  }
 }
 
 async function createMovie(movieData) {
@@ -36,5 +42,5 @@ module.exports = {
   getAllMovies,
   getMovieById,
   createMovie,
-  attachCastToMovie
+  attachCastToMovie,
 };
