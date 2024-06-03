@@ -4,7 +4,7 @@ const { getAllCast } = require("../services/cast");
 module.exports = {
   attachGet: async (req, res) => {
     const id = req.params.id;
-    const movie = await getMovieById(id).lean();
+    const movie = await getMovieById(id);
 
     if (!movie) {
       res.render("404");
