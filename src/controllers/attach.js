@@ -31,7 +31,13 @@ module.exports = {
       return;
     }
 
-    await attachCastToMovie(movieId, castId);
+    try{
+        await attachCastToMovie(movieId, castId);
+    }catch(err){
+        res.status(400).end();
+        return;
+    }
+    
 
     res.redirect("/details/" + movieId);
   },
