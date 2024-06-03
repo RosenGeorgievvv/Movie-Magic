@@ -37,8 +37,6 @@ module.exports = {
         res.status(400).end();
         return;
     }
-    
-
     res.redirect("/details/" + movieId);
   },
 };
