@@ -6,7 +6,8 @@ async function getAllMovies() {
 }
 
 async function getMovieById(id) {
-  return Movie.findById(id);
+  const movie = await Movie.findById(id).lean();
+  return movie;
 }
 
 async function createMovie(movieData) {
