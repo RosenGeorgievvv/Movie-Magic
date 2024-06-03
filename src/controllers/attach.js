@@ -33,6 +33,6 @@ module.exports = {
 
        await attachCastToMovie(movie, castId);
 
-       res.end();
+       res.redirect('/details/' + movieId);
     }
 }
