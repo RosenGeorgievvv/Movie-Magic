@@ -27,6 +27,9 @@ module.exports = {
        if(castId == 'none'){
         const allCast = await getAllCast();
         res.render('cast-attach', {movie, allCast, error: true });
+
+        return;
        }
+       res.end();
     }
 }
