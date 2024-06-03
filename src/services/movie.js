@@ -26,7 +26,12 @@ async function createMovie(movieData) {
   return movie;
 }
 
-async function attachCastToMovie(movie, castId) {
+async function attachCastToMovie(movieId, castId) {
+  const movie = await Movie.getById(movieId);
+
+  if(movie == null){
+    throw new Error(`Movie ${movieId} not found.`)
+  }
   movie.cast.push(castId);
 
   await movie.save();
