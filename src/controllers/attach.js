@@ -10,7 +10,7 @@ module.exports = {
       res.render("404");
       return;
     }
-    const allCast = await getAllCast();
+    const allCast = await getAllCast(id);
 
     res.render("cast-attach", { movie, allCast });
   },
