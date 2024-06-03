@@ -22,11 +22,12 @@ module.exports = {
       res.status(400).end();
       return;
     }
+    const movieQuery = getMovieById(movieId);
 
     if (castId == "none") {
       const movie = await getMovieById(movieId);
       const allCast = await getAllCast();
-      res.render("cast-attach", { movie, allCast, error: true });
+      res.render("cast-attach", { movie: await movieQuery.lean(), allCast, error: true });
 
       return;
     }
