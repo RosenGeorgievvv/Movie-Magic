@@ -15,6 +15,18 @@ module.exports = {
        res.render('cast-attach', {movie, allCast});
     },
     attachPost: async (req, res) =>{
-       
+       const movieId = req.params.id;
+       const castId = req.body.cast;
+
+       if(!movieId || !castId){
+         res.status(400).end();
+         return;
+       }
+       const movie = await getMovieById(id);
+
+       if(castId == 'none'){
+        const allCast = await getAllCast();
+        res.render('cast-attach', {movie, allCast, error: true });
+       }
     }
 }
