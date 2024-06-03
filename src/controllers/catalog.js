@@ -7,7 +7,7 @@ module.exports = {
   },
   details: async (req, res) => {
     const id = req.params.id;
-    const movie = await getMovieById(id);
+    const movie = await getMovieById(id).lean();
 
     if(!movie){
       res.render('404');
