@@ -25,8 +25,16 @@ async function createMovie(movieData) {
   return movie;
 }
 
+async function attachCastToMovie(movie, castId) {
+  movie.cast.push(castId);
+
+  await movie.save();
+  return movie;
+}
+
 module.exports = {
   getAllMovies,
   getMovieById,
-  createMovie
+  createMovie,
+  attachCastToMovie
 };
