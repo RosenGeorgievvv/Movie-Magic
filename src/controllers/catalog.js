@@ -2,7 +2,7 @@ const { getAllMovies, getMovieById } = require("../services/movie");
 
 module.exports = {
   home: async (req, res) => {
-    res.cookie('message=hello');
+    res.cookie('message', 'hello', {httpOnly: true});
     const movies = await getAllMovies();
     res.render("home", { movies });
   },
