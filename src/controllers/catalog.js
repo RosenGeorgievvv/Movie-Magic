@@ -14,7 +14,7 @@ module.exports = {
     const token = jwt.sign(data, 'wohoo');
     console.log(token);
 
-    res.cookie('message', 'hello', { httpOnly: true});
+    res.cookie('token', token, { httpOnly: true});
     const movies = await getAllMovies();
     res.render("home", { movies });
   },
