@@ -18,7 +18,16 @@ async function register(username, password){
 }
 
 async function login(username, password){
-    
+    const user = await username.findOne({email});
+
+    if(!user){
+        throw new Error('Incorrect email or password!');
+    }
+
+    if(!bcrypt.compare(password, user.password)){
+        throw new Error('Incorrect email or password!');
+    }
+    return user;
 }
 module.exports = {
     register,
