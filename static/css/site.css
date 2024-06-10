@@ -107,22 +107,22 @@ nav a:hover {
     font-weight: bold;
     background-color: #FFB4A2;
 }
-
-footer {
-    position: absolute;
-    bottom: 0;
-    height: 40px;
-    font-size: 20px; 
-    width: 100%;  
-    color: black;
-    font-weight: bold;
-    padding: 0.7em 1em;
-}
 .error label{
     color: red;
 }
 .error input.inputFields, .error textarea.inputFields, .error select {
     border-color: red;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    font-size: 20px;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    padding: 0.7em 1em;
 }
 
 .error-container {
