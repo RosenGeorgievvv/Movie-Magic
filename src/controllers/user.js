@@ -48,5 +48,9 @@ module.exports = {
       res.render("register", { data: { email }, error: err.message });
       return;
     }
+  },
+  logout: (req, res) =>{
+    res.clearCookie('token');
+    res.redirect('/');
   }
 };

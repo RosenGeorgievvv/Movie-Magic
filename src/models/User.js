@@ -12,7 +12,7 @@ const userSchema = new Schema(
     },
   },
   {
-    collation: { local: "en", strength: 2 },
+    collation: { locale: "en", strength: 2 },
   }
 );
 
