@@ -9,7 +9,7 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    
+    collation: {local: 'en', strength: 2}
 });
 
 const User = model('User', userSchema);
