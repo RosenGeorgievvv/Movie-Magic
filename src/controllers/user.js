@@ -27,4 +27,10 @@ module.exports = {
       return;
     }
   },
+  loginGet: (req,res) =>{
+
+  },
+  loginPost: (req, res) =>{
+    
+  }
 };
