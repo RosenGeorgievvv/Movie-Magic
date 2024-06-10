@@ -9,9 +9,11 @@ function session(){
             const payload = verifyToken(token);
             req.user = payload;
         } catch (error) {
-            
+            res.clearCookie('token');
         }
        }
+
+       next();
     };
 }
 
