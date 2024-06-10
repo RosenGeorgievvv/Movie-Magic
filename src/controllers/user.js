@@ -9,7 +9,7 @@ module.exports = {
       if (!email || !password) {
         throw new Error("All fields are required!");
       }
-      if (!password != !repass) {
+      if (!password != repass) {
         throw new Error("Passwords don't match!");
       }
     } catch (err) {
