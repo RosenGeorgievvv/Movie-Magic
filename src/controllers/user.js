@@ -14,6 +14,7 @@ module.exports = {
       }
     } catch (err) {
       res.render("register", { data:email, error: err.message });
+      return;
     }
 
     res.redirect("/register");
