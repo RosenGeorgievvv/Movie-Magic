@@ -12,6 +12,8 @@ const token = jwt.sign(payload, secret, { expiresIn: '2d' })
 return token;
 }
 function verifyToken(token){
+    const payload = jwt.verify(token, secret);
+    return payload;
 
 }
 
