@@ -13,7 +13,7 @@ module.exports = {
         throw new Error("Passwords don't match!");
       }
     } catch (err) {
-      res.render("register", { data:email, error: err.message });
+      res.render("register", { data: { email }, error: err.message });
       return;
     }
 

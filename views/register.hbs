@@ -1,6 +1,6 @@
 {{#if error}}
 <div class="error-container">
-  <p>All fields are required!</p>
+  <p>{{error}}</p>
 </div>
 {{/if}}
 
@@ -15,7 +15,7 @@
       <ul class="noBullet">
         <li>
           <label for="email">Email:</label>
-          <input type="text" class="inputFields" id="email" name="email" value="" />
+          <input type="text" class="inputFields" id="email" name="email" {{#if error}} value="{{data.email}}"{{/if}} />
         </li>
         <li>
           <label for="password">Password:</label>
