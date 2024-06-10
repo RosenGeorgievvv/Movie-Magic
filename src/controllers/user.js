@@ -1,4 +1,4 @@
-const register = require('../services/service');
+const { register } = require("../services/user");
 
 module.exports = {
   registerGet: (req, res) => {
@@ -11,17 +11,15 @@ module.exports = {
       if (!email || !password) {
         throw new Error("All fields are required!");
       }
-      if (!password != repass) {
+      if (password != repass) {
         throw new Error("Passwords don't match!");
       }
 
       const user = await register(email, password);
-      res.redirect('/')
+      res.redirect("/");
     } catch (err) {
-      res.render("register", { data: { email } , error: err.message });
+      res.render("register", { data: { email }, error: err.message });
       return;
     }
-
-    res.redirect("/register");
   },
 };
