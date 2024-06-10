@@ -1,7 +1,7 @@
 const {Schema, model} = require('mongoose');
 
 const userSchema = new Schema({
-    username:{
+    email:{
         type: String,
         required: true
     },
@@ -9,6 +9,8 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+},
+{
     collation: {local: 'en', strength: 2}
 });
 
