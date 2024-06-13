@@ -1,6 +1,6 @@
 const { Router } = require("express");
 
-const { isGuest, isUser } = require('../middlewares/guards');
+
 
 const { home, details, search } = require("../controllers/catalog");
 const { about } = require("../controllers/about");
