@@ -1,35 +1,47 @@
-const { User } = require("../models/User");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcrypt');
+const { User } = require('../models/User');
 
-async function register(username, password) {
-  const existing = await username.findOne({ email });
+async function register(email, password) {
 
-  if (existing) {
-    throw new Error("Email is already used");
-  }
-  const user = new User({
-    email,
-    password: await bcrypt.hash(password, 10),
-  });
+    const existing = await User.findOne({ email });
 
-  await user.save();
-  return user;
+    if (existing) {
+        const err = new Error('Email is already used');
+        err.errors = { email: 'Email is already used' };
+        throw err;
+    }
+
+    const user = new User({
+        email,
+        password: await bcrypt.hash(password, 10)
+    });
+
+    await user.save();
+
+    return user;
 }
 
-async function login(username, password) {
-  const user = await username.findOne({ email });
+async function login(email, password) {
+    // check if user exists -> throw error if false
+    // compare hashed password -> throw error if false
+    // return matched user
 
-  if (!user) {
-    throw new Error("Incorrect email or password!");
-  }
-  const match = await bcrypt.compare(password, user.password);
-  
-  if (!match) {
-    throw new Error("Incorrect email or password!");
-  }
-  return user;
+    const user = await User.findOne({ email });
+
+    if (!user) {
+        throw new Error('Incorrect email or password');
+    }
+
+    const match = await bcrypt.compare(password, user.password);
+
+    if (!match) {
+        throw new Error('Incorrect email or password');
+    }
+
+    return user;
 }
+
 module.exports = {
-  register,
-  login,
+    register,
+    login
 };

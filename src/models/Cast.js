@@ -1,4 +1,4 @@
-const {Schema, SchemaTypes: Types, model} = require('mongoose');
+const { Schema, SchemaTypes: Types, model } = require('mongoose');
 
 const castSchema = new Schema({
     name: {
@@ -19,7 +19,7 @@ const castSchema = new Schema({
         type: String,
         required: true
     },
-    imageURL: {
+    imageUrl: {
         type: String,
         required: true,
         match: /^https?:\/\/.+/
